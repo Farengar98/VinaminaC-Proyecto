@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bulletScript : MonoBehaviour {
+public class bulletScriptLeft : MonoBehaviour {
 
     public float bulletSpeed = 10; 
 
@@ -13,6 +13,8 @@ public class bulletScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Translate(new Vector2(bulletSpeed, 0));
+		GetComponent<SpriteRenderer>().flipX = true;
+        transform.Translate(new Vector2(-bulletSpeed, 0));
+
 	}
 }

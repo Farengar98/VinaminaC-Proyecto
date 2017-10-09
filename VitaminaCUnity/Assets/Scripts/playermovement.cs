@@ -16,7 +16,8 @@ public class playermovement : MonoBehaviour {
     void Start () {
     }
 
-    public GameObject ProjectilePrefab;
+    public GameObject bulletRight;
+	public GameObject bulletLeft;
 
 	// Update is called once per frame
 	void Update ()
@@ -39,7 +40,14 @@ public class playermovement : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            Instantiate (ProjectilePrefab);
+			if (GetComponent<SpriteRenderer> ().flipX) {
+				Instantiate (bulletRight, transform);
+			}
+			else
+			{
+				Instantiate (bulletLeft, transform);
+			}
+            
         }
     }
  
