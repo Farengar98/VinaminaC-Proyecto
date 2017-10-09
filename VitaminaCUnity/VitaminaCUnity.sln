@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VitaminaCUnity", "VitaminaCUnity.csproj", "{54A86228-3A7C-0591-1A68-8EAC4A9178AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54A86228-3A7C-0591-1A68-8EAC4A9178AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54A86228-3A7C-0591-1A68-8EAC4A9178AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54A86228-3A7C-0591-1A68-8EAC4A9178AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54A86228-3A7C-0591-1A68-8EAC4A9178AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
