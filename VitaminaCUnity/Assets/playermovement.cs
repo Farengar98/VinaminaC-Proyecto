@@ -15,7 +15,9 @@ public class playermovement : MonoBehaviour {
     // Use this for initialization
     void Start () {
     }
-	
+
+    public GameObject ProjectilePrefab;
+
 	// Update is called once per frame
 	void Update ()
     {
@@ -34,6 +36,10 @@ public class playermovement : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
         {
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpSpeed);
+        }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Instantiate (ProjectilePrefab);
         }
     }
  
