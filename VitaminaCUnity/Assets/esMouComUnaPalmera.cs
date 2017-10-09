@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class esMouComUnaPalmera : MonoBehaviour {
 
-    public float moviment;
+     private Vector3 startPosition;
 
     // Use this for initialization
     void Start () {
-        moviment = 0.30f;
+        startPosition = transform.position;
 
     }
 	// Update is called once per frame
 	void Update () {
-        
 
-        
+        transform.position = startPosition + new Vector3(Mathf.Sin(Time.time), 0.0f, 0.0f);
+
     }
 }
