@@ -46,8 +46,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
      <Compile Include="Assets\Scripts\BasicEnemyAI.cs" />
      <Compile Include="Assets\Scripts\ButtonManager.cs" />
+=======
+     <Compile Include="Assets\BasicEnemyAI.cs" />
+     <Compile Include="Assets\PositionController.cs" />
+     <Compile Include="Assets\Scripts\ButtonManagerLeft.cs" />
+>>>>>>> Stashed changes
      <Compile Include="Assets\Scripts\WaveSpawner.cs" />
      <Compile Include="Assets\Scripts\bulletScriptLeft.cs" />
      <Compile Include="Assets\Scripts\bulletScriptRight.cs" />

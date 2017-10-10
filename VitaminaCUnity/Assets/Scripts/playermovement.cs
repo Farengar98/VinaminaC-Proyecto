@@ -22,6 +22,8 @@ public class playermovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+
+
 		if(Input.GetKey(KeyCode.A))
         {
 
@@ -41,14 +43,45 @@ public class playermovement : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
 			if (GetComponent<SpriteRenderer> ().flipX) {
-				Instantiate (bulletRight, transform);
+				Instantiate (bulletRight);
 			}
 			else
 			{
-				Instantiate (bulletLeft, transform);
+				Instantiate (bulletLeft);
 			}
             
         }
+
+
+
     }
- 
+
+	IEnumerator  waitForASec ()
+	{
+		yield return new WaitForSeconds (1.0f);
+		applyDelay = false;
+	}
+
+
+	public bool applyDelay = false;
+
+	void OnCollisionEnter2D(Collision2D collision)
+	{
+		if(collision.gameObject.tag == "RightTP" || !applyDelay)
+		{
+			print("hey, estoy triggered Right");
+			Vector3 temp = new Vector2(-transform.position.x,transform.position.y);
+			transform.position = temp;
+			applyDelay = true;
+			StartCoroutine (waitForASec());
+		}
+		if (collision.gameObject.tag == "LeftTP"|| !applyDelay) 
+		{
+			print("hey, estoy triggered Left");
+			Vector3 temp = new Vector2(-transform.position.x,transform.position.y);
+			transform.position = temp;
+			applyDelay = true;
+			StartCoroutine (waitForASec());
+		}
+}
 }

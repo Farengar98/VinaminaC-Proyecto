@@ -5,16 +5,21 @@ using UnityEngine;
 public class bulletScriptRight : MonoBehaviour {
 
     public float bulletSpeed = 10; 
+	public GameObject originPos;
+
 	// Use this for initialization
 	void Start () {
-		
+		transform.Translate(new Vector3 (gameObject.transform.position.x, gameObject.transform.position.y));
 	}
 
+<<<<<<< Updated upstream
 	
+=======
+>>>>>>> Stashed changes
 	// Update is called once per frame
 	void Update () {
 		GetComponent<SpriteRenderer>().flipX = false;
-		transform.Translate(new Vector2(bulletSpeed, 0));
+		transform.Translate(new Vector2(bulletSpeed, gameObject.transform.position.y));
 
 		Vector2 position = transform.position;
 
