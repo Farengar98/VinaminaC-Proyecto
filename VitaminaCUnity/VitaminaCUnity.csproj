@@ -78,6 +78,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BasicEnemyAI.cs" />
     <Compile Include="Assets\Scripts\ButtonManagerLeft.cs" />
     <Compile Include="Assets\Scripts\WaveSpawner.cs" />
     <Compile Include="Assets\Scripts\bulletScriptLeft.cs" />

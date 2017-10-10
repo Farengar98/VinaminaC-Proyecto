@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class esMouComUnaPalmera : MonoBehaviour {
 
-     private Vector3 startPosition;
+     private Vector2 startPosition;
 
     // Use this for initialization
     void Start () {
@@ -14,7 +14,7 @@ public class esMouComUnaPalmera : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        transform.position = startPosition + new Vector3(Mathf.Sin(Time.time), 0.0f, 0.0f);
+        transform.position = startPosition + new Vector2(Mathf.Sin(Time.time), 0.0f);
 
     }
 }
