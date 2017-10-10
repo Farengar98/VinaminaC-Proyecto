@@ -8,8 +8,12 @@ public class BasicEnemyAI : MonoBehaviour {
     public float enemySpeed;
     Collision2D collision;
 
+	public int vida;
+
     // Use this for initialization
     void Start () {
+
+		vida = 2;
         LeftOrRight = Random.value > 0.5f;
         if (LeftOrRight)
         {
@@ -32,6 +36,16 @@ public class BasicEnemyAI : MonoBehaviour {
         {
             flip();
         }
+
+		if (collision.gameObject.tag == "Bullet")
+			{
+			vida--;
+			}
+
+		if (vida == 0) 
+		{
+			Destroy (gameObject);		
+		}
 	}
 
     void flip()
@@ -41,8 +55,11 @@ public class BasicEnemyAI : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D something)
     {
         if (something.tag == "Wall")
-            GetComponent<SpriteRenderer>().flipX = false;
-    }
+		{
+          //  GetComponent<SpriteRenderer>().flipX = false;
+		
 
+   		}
+
+	}
 }
-
