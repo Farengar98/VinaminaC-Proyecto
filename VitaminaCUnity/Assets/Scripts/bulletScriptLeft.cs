@@ -17,8 +17,11 @@ public class bulletScriptLeft : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<SpriteRenderer>().flipX = true;
-        transform.Translate(new Vector2(-bulletSpeed, 0));
+        //GetComponent<SpriteRenderer>().flipX = true;
+
+		//transform.localScale += new Vector3(2f, 2f, 0);
+
+        transform.Translate(new Vector2(bulletSpeed, 0));
 
         Vector2 position = transform.position;
 

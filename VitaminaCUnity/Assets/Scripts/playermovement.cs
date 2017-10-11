@@ -33,13 +33,13 @@ public class playermovement : MonoBehaviour {
         {
 
             transform.Translate(new Vector2(-1, 0) * MoveSpeed * Time.deltaTime);
-            GetComponent<SpriteRenderer>().flipX = false;
+            GetComponent<SpriteRenderer>().flipX = true;
 
         }
         if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(new Vector2(1, 0) * MoveSpeed * Time.deltaTime);
-            GetComponent<SpriteRenderer>().flipX = true; ;
+            GetComponent<SpriteRenderer>().flipX = false; ;
         }
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded || Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
@@ -54,7 +54,7 @@ public class playermovement : MonoBehaviour {
 			}
 			else
 			{
-				Instantiate (bulletLeft, transform);
+				Instantiate (bulletLeft ,transform);
 			}
             
         }
