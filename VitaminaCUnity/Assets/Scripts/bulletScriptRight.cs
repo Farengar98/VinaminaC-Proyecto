@@ -32,7 +32,7 @@ public class bulletScriptRight : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Floor" || collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Floor" || collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "RightTP")
         {
             Destroy(gameObject);
         }
