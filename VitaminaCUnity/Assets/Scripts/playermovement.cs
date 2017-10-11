@@ -14,6 +14,8 @@ public class playermovement : MonoBehaviour {
 
     public bool applyDelay;
 
+    bool isGrounded = true;
+
     // Use this for initialization
     void Start () {
         applyDelay = false;
@@ -39,9 +41,11 @@ public class playermovement : MonoBehaviour {
             transform.Translate(new Vector2(1, 0) * MoveSpeed * Time.deltaTime);
             GetComponent<SpriteRenderer>().flipX = true; ;
         }
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded || Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpSpeed);
+            isGrounded = false;
+
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -90,5 +94,8 @@ public class playermovement : MonoBehaviour {
 			applyDelay = true;
 			StartCoroutine (waitForASec());
 		}
-}
+
+        if (collision.gameObject.tag == "Floor")
+            isGrounded = true;
+    }
 }

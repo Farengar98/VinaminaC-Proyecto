@@ -50,6 +50,7 @@
      <Compile Include="Assets\PositionController.cs" />
      <Compile Include="Assets\Scripts\BasicEnemyAI.cs" />
      <Compile Include="Assets\Scripts\ButtonManager.cs" />
+     <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Scripts\WaveSpawner.cs" />
      <Compile Include="Assets\Scripts\bulletScriptLeft.cs" />
      <Compile Include="Assets\Scripts\bulletScriptRight.cs" />
