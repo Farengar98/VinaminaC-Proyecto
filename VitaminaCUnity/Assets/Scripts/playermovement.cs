@@ -12,13 +12,16 @@ public class playermovement : MonoBehaviour {
     public Rigidbody2D rigidBody;
     private SpriteRenderer mySpriteRenderer;
 
+    public bool applyDelay;
+
     // Use this for initialization
     void Start () {
+        applyDelay = false;
     }
 
     public GameObject bulletRight;
 	public GameObject bulletLeft;
-
+    
 	// Update is called once per frame
 	void Update ()
     {
@@ -43,11 +46,11 @@ public class playermovement : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
 			if (GetComponent<SpriteRenderer> ().flipX) {
-				Instantiate (bulletRight);
+				Instantiate (bulletRight, transform);
 			}
 			else
 			{
-				Instantiate (bulletLeft);
+				Instantiate (bulletLeft, transform);
 			}
             
         }
@@ -56,29 +59,33 @@ public class playermovement : MonoBehaviour {
 
     }
 
-	IEnumerator  waitForASec ()
+
+    
+
+
+    IEnumerator  waitForASec ()
 	{
 		yield return new WaitForSeconds (1.0f);
 		applyDelay = false;
 	}
 
 
-	public bool applyDelay = false;
+    
 
-	void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
 	{
-		if(collision.gameObject.tag == "RightTP" || !applyDelay)
+		if(collision.gameObject.tag == "RightTP" && !applyDelay)
 		{
 			print("hey, estoy triggered Right");
-			Vector3 temp = new Vector2(-transform.position.x,transform.position.y);
+			Vector3 temp = new Vector2((-1) * transform.position.x,transform.position.y);
 			transform.position = temp;
 			applyDelay = true;
 			StartCoroutine (waitForASec());
 		}
-		if (collision.gameObject.tag == "LeftTP"|| !applyDelay) 
+		if (collision.gameObject.tag == "LeftTP"&& !applyDelay) 
 		{
 			print("hey, estoy triggered Left");
-			Vector3 temp = new Vector2(-transform.position.x,transform.position.y);
+			Vector3 temp = new Vector2((-1)*transform.position.x,transform.position.y);
 			transform.position = temp;
 			applyDelay = true;
 			StartCoroutine (waitForASec());

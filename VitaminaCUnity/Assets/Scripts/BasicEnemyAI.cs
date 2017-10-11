@@ -75,7 +75,6 @@ public class BasicEnemyAI : MonoBehaviour {
 		}
 
 		}
->>>>>>> Stashed changes:VitaminaCUnity/Assets/BasicEnemyAI.cs
 
     void flip()
     {
