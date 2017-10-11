@@ -42,23 +42,23 @@ public class BasicEnemyAI : MonoBehaviour
          }
          if (speed < 0)
          {
-             transform.localScale = new Vector3(1f, 1f, 1f);
+             transform.localScale = new Vector3(-1f, 1f, 1f);
          }*/
 
     }
-}
 
-/*
-void OnTriggerEnter2D(Collider2D something)
+
+	void OnCollisionEnter2D(Collision2D something)
     {
-        if (something.tag == "Wall")
+		if (something.gameObject.tag == "Wall")
 		{
           //  GetComponent<SpriteRenderer>().flipX = false;
    		}
-        if(something.tag == "Bullet")
+        if(something.gameObject.tag == "Bullet")
         {
              //Destroy();
+			print ("menos vida cohone");
+			vida--;
         }
-
-
-    }*/
+    }
+}
