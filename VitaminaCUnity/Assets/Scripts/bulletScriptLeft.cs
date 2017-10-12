@@ -25,7 +25,7 @@ public class bulletScriptLeft : MonoBehaviour
 
         Vector2 position = transform.position;
 
-        position = new Vector2(position.x + bulletSpeed * Time.deltaTime, position.y);
+        position = new Vector2(position.x + bulletSpeed, position.y);
 
         transform.position = position;
 

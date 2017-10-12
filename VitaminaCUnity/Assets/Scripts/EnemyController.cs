@@ -32,6 +32,16 @@ public class EnemyController : MonoBehaviour
             rb2d.velocity = new Vector2(speed, rb2d.velocity.y);
         }
 
+		if (speed < 0) {
+
+			GetComponent<SpriteRenderer>().flipX = false;
+		}
+		else
+		{
+			GetComponent<SpriteRenderer>().flipX = true;
+
+		}
+
         if (vida < 1)
         {
             Destroy(gameObject);
@@ -62,5 +72,11 @@ public class EnemyController : MonoBehaviour
             print("menos vida cohone");
             vida--;
         }
+		if (something.gameObject.tag == "Suelo") {
+			Vector3 temp = new Vector2(transform.position.x, (-1)*transform.position.y);
+			transform.position = temp;
+			
+		}
+
     }
 }

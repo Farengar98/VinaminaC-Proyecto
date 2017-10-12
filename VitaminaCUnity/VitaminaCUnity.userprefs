@@ -1,13 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\bulletScriptLeft.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EnemyController.cs">
     <Files>
       <File FileName="Assets\Scripts\bulletScriptRight.cs" Line="27" Column="39" />
+      <File FileName="Assets\Scripts\playermovement.cs" Line="68" Column="25" />
       <File FileName="Assets\KillFloor.cs" Line="1" Column="1" NotebookId="1" />
       <File FileName="Assets\Scripts\BasicEnemyAI.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets\Scripts\bulletScriptLeft.cs" Line="30" Column="39" NotebookId="1" />
+      <File FileName="Assets\Scripts\bulletScriptLeft.cs" Line="28" Column="56" NotebookId="1" />
       <File FileName="Assets\Scripts\WaveSpawner.cs" Line="7" Column="2" NotebookId="1" />
-      <File FileName="Assets\Scripts\playermovement.cs" Line="57" Column="41" NotebookId="1" />
+      <File FileName="Assets\Scripts\EnemyController.cs" Line="80" Column="3" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

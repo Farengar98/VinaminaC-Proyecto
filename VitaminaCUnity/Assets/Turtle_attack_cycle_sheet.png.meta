@@ -1,0 +1,174 @@
+fileFormatVersion: 2
+guid: f7102f1699c7d0f428278af0b12cab95
+timeCreated: 1507800236
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Turtle_attack_cycle_sheet_0
+    21300002: Turtle_attack_cycle_sheet_1
+    21300004: Turtle_attack_cycle_sheet_2
+    21300006: Turtle_attack_cycle_sheet_3
+    21300008: Turtle_attack_cycle_sheet_6
+    21300010: Turtle_attack_cycle_sheet_7
+    21300012: Turtle_attack_cycle_sheet_8
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Turtle_attack_cycle_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 184
+        width: 34
+        height: 32
+      alignment: 9
+      pivot: {x: 0.42764962, y: 0.45410347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle_attack_cycle_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 184
+        width: 34
+        height: 32
+      alignment: 9
+      pivot: {x: 0.42648673, y: 0.45346022}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle_attack_cycle_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 124
+        width: 34
+        height: 33
+      alignment: 9
+      pivot: {x: 0.42791367, y: 0.4398406}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle_attack_cycle_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 124
+        width: 40
+        height: 36
+      alignment: 9
+      pivot: {x: 0.36410293, y: 0.40135023}
+      border: {x: 0, y: 0, z: 5, w: 4}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle_attack_cycle_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 64
+        width: 39
+        height: 38
+      alignment: 9
+      pivot: {x: 0.37307113, y: 0.38171205}
+      border: {x: 0, y: 0, z: 5, w: 6}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle_attack_cycle_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 64
+        width: 40
+        height: 39
+      alignment: 9
+      pivot: {x: 0.36358204, y: 0.37042588}
+      border: {x: 0, y: 0, z: 6, w: 7}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle_attack_cycle_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 4
+        width: 34
+        height: 32
+      alignment: 9
+      pivot: {x: 0.4273976, y: 0.45162874}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

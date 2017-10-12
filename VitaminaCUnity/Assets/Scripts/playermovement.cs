@@ -7,7 +7,7 @@ public class playermovement : MonoBehaviour {
 
 
     public float MoveSpeed = 0.1f;
-
+	private int vidas = 3;
     public float jumpSpeed = 10f;
     public Rigidbody2D rigidBody;
     private SpriteRenderer mySpriteRenderer;
@@ -18,6 +18,7 @@ public class playermovement : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+		//GetComponent<Animation>()["shootingAnim"].wrapMode = WrapMode.Once;
         applyDelay = false;
     }
 
@@ -49,7 +50,11 @@ public class playermovement : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-			if (GetComponent<SpriteRenderer> ().flipX) {
+			if (GetComponent<SpriteRenderer> ().flipX) 
+			{
+				
+				//GetComponent<Animation> ().Play ();
+
 				Instantiate (bulletRight, transform);
 			}
 			else
@@ -59,7 +64,10 @@ public class playermovement : MonoBehaviour {
             
         }
 
-
+		if (vidas < 1) {
+			Destroy (gameObject);
+		
+		}
 
     }
 
@@ -95,7 +103,12 @@ public class playermovement : MonoBehaviour {
 			StartCoroutine (waitForASec());
 		}
 
-        if (collision.gameObject.tag == "Floor")
-            isGrounded = true;
+		if (collision.gameObject.tag == "Floor") {
+			isGrounded = true;
+		}
+
+		if (collision.gameObject.tag == "Enemy") {
+			vidas--;
+		}
     }
 }
