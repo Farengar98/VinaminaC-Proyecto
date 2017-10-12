@@ -6,8 +6,8 @@ public class EnemyController : MonoBehaviour
 {
 
     public float maxSpeed = 1f;
-    public float speed = 1f;
-
+    public float speed;
+    bool initialDir;
     private Rigidbody2D rb2d;
 
     public int vida = 2;
@@ -15,7 +15,15 @@ public class EnemyController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        //speed = Random.Range (0.75f, 1.25f);
         rb2d = GetComponent<Rigidbody2D>();
+        initialDir = (Random.value > 0.5f);
+
+        if (initialDir)
+        {
+
+            speed *= -1;
+        }
     }
 
     // Update is called once per frame
@@ -32,15 +40,16 @@ public class EnemyController : MonoBehaviour
             rb2d.velocity = new Vector2(speed, rb2d.velocity.y);
         }
 
-		if (speed < 0) {
+        if (speed < 0)
+        {
 
-			GetComponent<SpriteRenderer>().flipX = false;
-		}
-		else
-		{
-			GetComponent<SpriteRenderer>().flipX = true;
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
 
-		}
+        }
 
         if (vida < 1)
         {
@@ -72,11 +81,12 @@ public class EnemyController : MonoBehaviour
             print("menos vida cohone");
             vida--;
         }
-		if (something.gameObject.tag == "Suelo") {
-			Vector3 temp = new Vector2(transform.position.x, (-1)*transform.position.y);
-			transform.position = temp;
-			
-		}
+        if (something.gameObject.tag == "Suelo")
+        {
+            Vector3 temp = new Vector2(transform.position.x, (-1) * transform.position.y);
+            transform.position = temp;
+
+        }
 
     }
 }
