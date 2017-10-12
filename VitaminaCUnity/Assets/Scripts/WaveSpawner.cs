@@ -9,12 +9,14 @@ public class WaveSpawner : MonoBehaviour
 
     public Transform spawnPoint;
 
-    public float timeBetweenWaves = 5f;
+    public float timeBetweenWaves = 9f;
     private float countdown = 2f;
 
     public Text waveCountdownText;
 
     private int waveNumber = 1;
+
+    bool start = true;
 
 
     // Use this for initialization
@@ -26,17 +28,21 @@ public class WaveSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (countdown <= 0f)
+        if (start == true)
         {
-            StartCoroutine(SpawnWave());
-            countdown = timeBetweenWaves;
 
+
+            if (countdown <= 0f)
+            {
+                StartCoroutine(SpawnWave());
+                countdown = timeBetweenWaves;
+
+            }
+
+            countdown -= Time.deltaTime;
+
+            waveCountdownText.text = Mathf.Round(countdown).ToString();
         }
-
-        countdown -= Time.deltaTime;
-
-        waveCountdownText.text = Mathf.Round(countdown).ToString();
 
     }
 
@@ -49,6 +55,13 @@ public class WaveSpawner : MonoBehaviour
         }
 
         waveNumber++;
+
+        if(waveNumber == 8)
+        {
+            start = false;
+            countdown = 0;
+
+        }
     }
 
     void SpawnEnemy()
