@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\WaveSpawner.cs" />
      <Compile Include="Assets\Scripts\bulletScriptLeft.cs" />
      <Compile Include="Assets\Scripts\bulletScriptRight.cs" />
+     <Compile Include="Assets\Scripts\esMouComUnaNoPalmera.cs" />
      <Compile Include="Assets\Scripts\esMouComUnaPalmera.cs" />
      <Compile Include="Assets\Scripts\playermovement.cs" />
      <Compile Include="Assets\shootcocks.cs" />
