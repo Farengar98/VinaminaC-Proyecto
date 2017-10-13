@@ -17,8 +17,6 @@ public class WaveSpawner : MonoBehaviour
 
     private int waveNumber = 1;
 
-    bool start = true;
-
 	public float tiempo;
 	public string levelToLoad;
 
@@ -32,9 +30,6 @@ public class WaveSpawner : MonoBehaviour
     void Update()
     {
 		tiempo += Time.deltaTime;
-
-        if (start == true)
-        {
 			
 			if (tiempo >= 60) {
 
@@ -51,8 +46,6 @@ public class WaveSpawner : MonoBehaviour
             countdown -= Time.deltaTime;
 
             waveCountdownText.text = Mathf.Round(countdown).ToString();
-        }
-
     }
 
     IEnumerator SpawnWave()
@@ -63,13 +56,7 @@ public class WaveSpawner : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
         }
 
-        waveNumber++;
-
-        if(waveNumber == 10)
-        {
-            start = false;
-            countdown = 0;
-        }   
+        waveNumber++;		 
     }
 
     void SpawnEnemy()

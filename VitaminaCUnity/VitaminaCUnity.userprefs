@@ -5,9 +5,9 @@
       <File FileName="Assets\Scripts\bulletScriptRight.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\playermovement.cs" Line="109" Column="2" />
       <File FileName="Assets\KillFloor.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets\Scripts\BasicEnemyAI.cs" Line="42" Column="10" NotebookId="1" />
+      <File FileName="Assets\Scripts\BasicEnemyAI.cs" Line="1" Column="1" NotebookId="1" />
       <File FileName="Assets\Scripts\bulletScriptLeft.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets\Scripts\WaveSpawner.cs" Line="68" Column="28" NotebookId="1" />
+      <File FileName="Assets\Scripts\WaveSpawner.cs" Line="34" Column="19" NotebookId="1" />
       <File FileName="Assets\Scripts\EnemyController.cs" Line="1" Column="1" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
