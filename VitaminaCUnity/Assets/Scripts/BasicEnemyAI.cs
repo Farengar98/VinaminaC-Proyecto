@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.SceneManagement;
+
 public class BasicEnemyAI : MonoBehaviour
 {
     public int vida = 2;
     public float maxSpeed = 1f;
     public float speed = 1f;
+
+	public bool contador = false;
 
     private Rigidbody2D rb2d;
 
@@ -32,9 +36,11 @@ public class BasicEnemyAI : MonoBehaviour
 
         if(vida < 1)
         {
+
+			contador = true;
             Destroy(gameObject);
         }
-
+			
         /*//Animaciones
          if (speed > 0)
          {

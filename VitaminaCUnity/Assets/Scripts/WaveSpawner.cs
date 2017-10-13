@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -18,19 +19,27 @@ public class WaveSpawner : MonoBehaviour
 
     bool start = true;
 
+	public float tiempo;
+	public string levelToLoad;
 
     // Use this for initialization
     void Start()
     {
-
+		
     }
 
     // Update is called once per frame
     void Update()
     {
+		tiempo += Time.deltaTime;
+
         if (start == true)
         {
+			
+			if (tiempo >= 60) {
 
+				SceneManager.LoadScene (levelToLoad);
+			}
 
             if (countdown <= 0f)
             {
@@ -56,12 +65,11 @@ public class WaveSpawner : MonoBehaviour
 
         waveNumber++;
 
-        if(waveNumber == 8)
+        if(waveNumber == 10)
         {
             start = false;
             countdown = 0;
-
-        }
+        }   
     }
 
     void SpawnEnemy()

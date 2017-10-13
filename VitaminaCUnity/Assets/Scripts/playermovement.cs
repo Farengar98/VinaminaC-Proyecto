@@ -60,8 +60,7 @@ public class playermovement : MonoBehaviour {
 			else
 			{
 				Instantiate (bulletLeft ,transform);
-			}
-            
+			}           
         }
 
 		if (vidas < 1) {
@@ -70,10 +69,6 @@ public class playermovement : MonoBehaviour {
 		}
 
     }
-
-
-    
-
 
     IEnumerator  waitForASec ()
 	{
