@@ -12,12 +12,16 @@ public class EnemyController : MonoBehaviour
 
     public int vida = 2;
 
+    public bool applyDelay;
+
     // Use this for initialization
     void Start()
     {
         //speed = Random.Range (0.75f, 1.25f);
         rb2d = GetComponent<Rigidbody2D>();
         initialDir = (Random.value > 0.5f);
+
+        applyDelay = false;
 
         if (initialDir)
         {
@@ -69,6 +73,12 @@ public class EnemyController : MonoBehaviour
 
     }
 
+    IEnumerator waitForASec()
+    {
+        yield return new WaitForSeconds(1.0f);
+        applyDelay = false;
+    }
+
     void OnCollisionEnter2D(Collision2D something)
     {
         if (something.gameObject.tag == "Wall")
@@ -86,6 +96,24 @@ public class EnemyController : MonoBehaviour
             Vector3 temp = new Vector2(transform.position.x, (-1) * transform.position.y);
             transform.position = temp;
 
+        }
+
+
+        if (something.gameObject.tag == "RightTP" && !applyDelay)
+        {
+            print("hey, estoy triggered Right");
+            Vector3 temp = new Vector2((-1) * transform.position.x, transform.position.y);
+            transform.position = temp;
+            applyDelay = true;
+            StartCoroutine(waitForASec());
+        }
+        if (something.gameObject.tag == "LeftTP" && !applyDelay)
+        {
+            print("hey, estoy triggered Left");
+            Vector3 temp = new Vector2((-1) * transform.position.x, transform.position.y);
+            transform.position = temp;
+            applyDelay = true;
+            StartCoroutine(waitForASec());
         }
 
     }

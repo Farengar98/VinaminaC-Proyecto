@@ -65,6 +65,7 @@ public class playermovement : MonoBehaviour {
 
 		if (vidas < 1) {
 			Destroy (gameObject);
+            Application.Quit();
 		
 		}
 
